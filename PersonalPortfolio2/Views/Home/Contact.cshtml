@@ -1,0 +1,93 @@
+﻿@{ ViewBag.Title = "Contact";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <header>
+        <!-- Your header content here -->
+    </header>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>East London, Buffalo City Metropolitan Municipality, South Africa</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:zukhanyekamlanazuzu@gmail.com">zukhanyekamlanazuzu@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <p>+27 123 456 789</p>
+            </div>
+            <div class="social-media">
+                <a href="https://github.com/Zukhanye9" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/zukhanye-kamlana-8a283a300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="feedbackMessage"></div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Your footer content here -->
+    </footer>
+
+    <script>document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Simple feedback message
+            const feedbackMessage = `
+                <h3>Thank You!</h3>
+                <p>Your message has been received:</p>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Subject:</strong> ${subject}</p>
+                <p><strong>Message:</strong> ${message}</p>
+            `;
+
+            document.getElementById('feedbackMessage').innerHTML = feedbackMessage;
+
+            // Optionally, you can clear the form fields
+            document.getElementById('contactForm').reset();
+        });</script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    form input, form textarea {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    form button {
+        padding: 0.5rem 2rem;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f4f4f4;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+    padding: 2rem;
+}
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+.portfolio-section {
+    padding: 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+    .portfolio-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .project img {
+        max-width: 200px;
+        height: auto;
+        margin-right: 1rem;
+        border-radius: 5px;
+    }
+
+.project-description {
+    text-align: left;
+}
+
+    .project-description h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-description p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center; /* Center the text */
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.about-section a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+    .about-section a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+.contact-form {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-form .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .contact-form label {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .contact-form textarea {
+        height: 150px;
+        resize: vertical;
+    }
+
+    .contact-form button {
+        padding: 0.75rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    form input, form textarea {
+        width: 95%;
+    }
+}
